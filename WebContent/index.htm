@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Título de la sesión02a</title>
+</head>
+<body>
+	<div style="float: right;">Lenguaje de programación II - Sesión02a</div>
+	<br />
+
+	<h2>
+		<font color="orange"> Invocar un Servlet o JSP mediante las etiquetas FORM y HREF :) </font>
+	</h2>
+
+	<!--  Cuando se generá un request a través de un link, el request nace con método GET -->
+	<a href="facilito">Invocar mediante GET</a>
+	<br />
+	<br />
+
+	<!--  invocamos al servlet pero generando un request con método POST -->
+	<font color="green" size="6"> Datos del cliente - Invocar mediante POST </font><hr>
+	<form method="post" action="miriamh">
+		Nombre: <input type="text" name="nombre" size="25"><br>
+		Dirección: <input type="text" name="direccion" size="25"><br>
+		Distrito: <select name="distrito">
+			<option>--Select--</option>
+			<option>Lima</option>
+			<option>Independencia</option>
+			<option>San Martin</option>
+			<option>San Isidro</option>
+			<option>La Molina</option>
+		</select><br /> 
+		
+		sexo:<br /> 
+		Masculino <input type="radio" name="sexo" value="M">
+		Femenino <input type="radio" name="sexo" value="F"> <br /> 
+		
+		¿Como te divirtes el fin de semana?? <br /> 
+		<input type="checkbox" name="diversion" value="Bailar">Salir a bailar<br /> 
+		<input type="checkbox" name="diversion" value="ver pelas en casa">Ver pelas en casa<br />
+		<input type="checkbox" name="diversion" value="Bailar">Salir a bailar <br /> 
+		<input type="checkbox" name="diversion" value="Bailar">Salir a bailar <br /><br /> 
+		<input type="submit" value="Registrar">
+	</form>
+</body>
+</html>

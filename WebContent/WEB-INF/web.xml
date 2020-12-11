@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>LP2-Semana06a</display-name>
+	
+	<!-- Definimos la página de bienvenida, tenemos varias opciones -->
+	<welcome-file-list>
+		<welcome-file>logueo.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- Registramos nuestro primer servlet -->
+	<servlet>
+		<servlet-name>jajaja</servlet-name>
+		<servlet-class>aprendamos.java.servlet.PrimerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jajaja</servlet-name>
+		<url-pattern>/facilito</url-pattern>
+		<url-pattern>/miriamh</url-pattern>
+	</servlet-mapping>
+
+	<!-- Registramos el servlet LogueoServlet -->
+	<servlet>
+		<servlet-name>jojojo</servlet-name>
+		<servlet-class>aprendamos.java.servlet.LogueoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jojojo</servlet-name>
+		<url-pattern>/logueo</url-pattern>
+	</servlet-mapping>
+
+	<!-- Configuramos el tiempo de inactividad de la sesión (20 minutos) -->
+	<session-config>
+		<session-timeout>20</session-timeout>
+	</session-config>
+
+	<!-- Registramos el servlet UsuarioSerlvet -->
+	<servlet>
+		<description></description>
+		<display-name>UsuarioServlet</display-name>
+		<servlet-name>UsuarioServlet</servlet-name>
+		<servlet-class>aprendamos.java.servlet.UsuarioServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UsuarioServlet</servlet-name>
+		<url-pattern>/UsuarioServlet</url-pattern>
+		<url-pattern>/usuario.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- Registramos el archivo de recursos properties -->
+	<context-param>
+		<description>Definimos archivo de recursos de JSTL</description>
+		<param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+		<param-value>aprendamos.java.recursos.Recursos</param-value>
+	</context-param>
+	
+	<!-- Registramos el servlet IdiomaServlet -->
+	<servlet>
+		<!-- Aquí definimos el nombre físico del servlet -->
+		<description></description>
+		<display-name>IdiomaServlet</display-name>
+		<servlet-name>IdiomaServlet</servlet-name>
+		<servlet-class>aprendamos.java.servlet.IdiomaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<!-- Aquí definimos el nombre lógico del servler -->
+		<servlet-name>IdiomaServlet</servlet-name>
+		<url-pattern>/IdiomaServlet</url-pattern>
+		<url-pattern>/idioma.do</url-pattern>
+	</servlet-mapping>
+</web-app>
